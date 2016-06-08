@@ -5,8 +5,15 @@
       font-family: Inconsolata;
     }
 
-    pre {
-      color: #b94646;
+    .trace {
+      background-color: #4c5467;
+      color: white;
+    }
+
+    .preview {
+      background: #576075;
+      color: #db5757;
+      padding-top: 14px;
     }
 
     code {
@@ -14,9 +21,8 @@
     }
 
     ul {
-      background-color: #4c5467;
-      color: white;
       list-style-type: none;
+      padding-bottom: 14px;
     }
   </style>
 </head>
@@ -27,14 +33,18 @@
   <code><%= message %></code>
 </pre>
 
-<code class="preview"><%= code_preview %></code>
 
-<ul>
-  <% backtrace.each do |trace| %>
-    <li>
-      <%= trace %>
-    </li>
-  <% end %>
-</ul>
+<div class="trace">
+  <pre class="preview">
+    <code><%= code_preview %></code>
+  </pre>
+  <ul>
+    <% backtrace.each do |trace| %>
+      <li>
+        <%= trace %>
+      </li>
+    <% end %>
+  </ul>
+</div>
 
 </body>

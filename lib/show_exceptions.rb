@@ -48,7 +48,7 @@ class ShowExceptions
         line += 1
       end
     end
-    line_preview
+    "> #{line_preview.strip}"
   end
 
 end
