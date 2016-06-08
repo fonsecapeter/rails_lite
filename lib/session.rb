@@ -29,8 +29,7 @@ class Session
   def store_session(res)
     res.set_cookie(
       '_rails_lite_app',
-      {
-        path: '/',
+      { path: '/',
         value: @session.to_json
       }
     )

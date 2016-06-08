@@ -1,0 +1,40 @@
+<head>
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Inconsolata">
+  <style>
+    body {
+      font-family: Inconsolata;
+    }
+
+    pre {
+      color: #b94646;
+    }
+
+    code {
+      font-family: Inconsolata;
+    }
+
+    ul {
+      background-color: #4c5467;
+      color: white;
+      list-style-type: none;
+    }
+  </style>
+</head>
+
+<body>
+
+<pre>
+  <code><%= message %></code>
+</pre>
+
+<code class="preview"><%= code_preview %></code>
+
+<ul>
+  <% backtrace.each do |trace| %>
+    <li>
+      <%= trace %>
+    </li>
+  <% end %>
+</ul>
+
+</body>
